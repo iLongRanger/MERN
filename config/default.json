@@ -1,7 +1,0 @@
-{
-    "mongoURI": "mongodb+srv://ralp_ortiz:6QbNHOciW4tSYYrA@devconnector-lawe6.mongodb.net/test?retryWrites=true&w=majority",
-    "jwtSecret": "mySecretToken"
-
-}
-
-
