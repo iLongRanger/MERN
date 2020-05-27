@@ -18,10 +18,9 @@ router.get("/me", auth, async (req, res) => {
     }).populate("user", ["name", "avatar"]);
 
     if (!profile) {
-      return res
-        .status(400)
-        .json({ msg: "There is no profile for this user." });
+      return res.status(400).json({ msg: "There is no profile for this user" });
     }
+
     res.json(profile);
   } catch (err) {
     console.error(err.message);
@@ -29,7 +28,7 @@ router.get("/me", auth, async (req, res) => {
   }
 });
 
-// @route    POsT  api/profile
+// @route    POsT  api/profiles
 // @desc     Create or update a user profile
 // @access   Private
 router.post(
@@ -164,7 +163,7 @@ router.delete("/", auth, async (req, res) => {
 // @desc     Add profile Expirience
 // @access   Private
 router.put(
-  "/expirience",
+  "/experience",
   [
     auth,
     check("title", "Title is required.").not().isEmpty(),
