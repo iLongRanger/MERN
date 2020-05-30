@@ -27,9 +27,9 @@ export const getCurrentProfile = () => async (dispatch) => {
   }
 };
 
-//get all profiles 
+//get all profiles
 export const getProfiles = () => async (dispatch) => {
-  dispatch({ type : CLEAR_PROFILE });
+  dispatch({ type: CLEAR_PROFILE });
   try {
     const res = await axios.get("/api/profiles");
 
@@ -45,7 +45,7 @@ export const getProfiles = () => async (dispatch) => {
   }
 };
 
-//get all profile by ID 
+//get profile by ID
 export const getProfileById = (userId) => async (dispatch) => {
   try {
     const res = await axios.get(`/api/profiles/user/${userId}`);
@@ -94,7 +94,7 @@ export const createProfile = (formData, history, edit = false) => async (
     });
 
     dispatch(
-      setAlert(edit ? "Profile Updated," : "Profile Created.", "success")
+      setAlert(edit ? "Profile Updated." : "Profile Created.", "success")
     );
 
     if (!edit) {
